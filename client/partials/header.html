@@ -1,0 +1,51 @@
+<script type="text/javascript">
+      $(document).ready(function () {
+          $('.slideout-menu-toggle').on('click', function(event){
+          	event.preventDefault();
+          	// create menu variables
+          	var slideoutMenu = $('.slideout-menu');
+          	var slideoutMenuWidth = $('.slideout-menu').width();
+          	
+          	// toggle open class
+          	slideoutMenu.toggleClass("open");
+          	
+          	// slide menu
+          	if (slideoutMenu.hasClass("open")) {
+      	    	slideoutMenu.animate({
+      		    	left: "0px"
+      	    	});	
+          	} else {
+      	    	slideoutMenu.animate({
+      		    	left: -slideoutMenuWidth
+      	    	}, 250);	
+          	}
+          });
+      });
+</script>
+
+	<!-- Main comapny header -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="navController" role="navigation">
+	  <div class="container">
+		<div class="navbar-header">
+		  <b>DEVICE NAME: </b>....
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<li ><a href="#" class="red-font ">Log Out <i class="glyphicon glyphicon-log-out"></i></a></li>
+		</ul>
+	  </div>
+	</nav>
+	<!-- Begin Sidebar -->
+    <div class="slideout-menu">
+	<h3>Menu <a href="#" class="slideout-menu-toggle">×</a></h3>
+	<ul>
+		<li ><a href="/home">Home<i class="fa fa-angle-right"></i></a></li>
+		<li ><a href="/projects/splash">Splash<i class="fa fa-angle-right"></i></a></li>
+		<li ><a href="/projects/welcome">Welcome<i class="fa fa-angle-right"></i></a></li>
+		<li ><a href="/projects/register">Register<i class="fa fa-angle-right"></i></a></li>
+		<li ><a href="/projects/thankyou">Thank you<i class="fa fa-angle-right"></i></a></li>
+		<li ><a href="/projects/menubar">Menu<i class="fa fa-angle-right"></i></a></li>
+		<li ><a href="#" class="slideout-menu-toggle">X</a></li>
+	</ul>
+</div>
+<div class="toggle-slide"><a href="#" class="button slideout-menu-toggle ">Main Menu</a></div>
+<!-- End Sidebar -->

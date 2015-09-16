@@ -1,0 +1,27 @@
+<head>
+    <link href="../../css/cover.css" rel="stylesheet" type="text/css">
+</head>
+<div class="masthead clearfix">
+    <div class="inner">
+    </div>
+</div>
+
+<div class="site-wrapper">
+    <div class="site-wrapper-inner">
+      <div class="cover-container">
+        <div class="inner cover text-center">
+          <div class="dropdown dropdown-box">
+            <input type="text" ng-model="selected" class="input-box btn-lg btn-block" typeahead="visitor as visitor.name for visitor in visitors| filter:$viewValue| limitTo:8" class="form-control">
+            <ul class="dropdown-menu">
+              <li ng-repeat="visitor in visitors">
+              <a href="#">{{visitor.name}}</a>
+              </li>
+            </ul>
+          </div>
+          <a ng-href="/kiosk/menubar"><button class="equal-btn btn btn-primary btn-lg right-buffer top-buffer" ng-click="selectUser()" >Continue</button></a>
+          <a ng-href="/splash"><button class="equal-btn btn btn-primary btn-lg right-buffer top-buffer" >Cancel </button></a>
+        </div>
+      </div>
+    </div>
+    
+</div>

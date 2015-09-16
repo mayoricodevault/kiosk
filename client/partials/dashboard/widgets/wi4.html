@@ -1,0 +1,18 @@
+<head>
+<link rel="stylesheet" href="css/circle.css" />
+</head>
+<h5 class="grey-font text-left">CONSUMPTION BY REGION</h5>
+<div ng-controller="wi4Controller">
+    <div class="limit top-buffer">
+        <img src="../../images/dashboard/map.png"/>
+        <div class="map-footer"><span class="circle-b">XX</span> <span class="grey-font">= drinks served</span></div>
+        <div class="map">
+            <div class="pulse animated position pos-1" id="state1Id" ng-class="{'circle-20':circleClass20(state1), 'circle-30':circleClass30(state1), 'circle-40':circleClass40(state1)}">{{state1}}</div><br/>
+            <div class="pulse animated position pos-2" id="state2Id" ng-class="{'circle-20':circleClass20(state2), 'circle-30':circleClass30(state2), 'circle-40':circleClass40(state2)}">{{state2}}</div><br/>
+            <div class="pulse animated position pos-3" id="state2Id" ng-class="{'circle-20':circleClass20(state3), 'circle-30':circleClass30(state3), 'circle-40':circleClass40(state3)}">{{state3}}</div><br/>
+            <div class="pulse animated position pos-4" id="state4Id" ng-class="{'circle-20':circleClass20(state4), 'circle-30':circleClass30(state4), 'circle-40':circleClass40(state4)}">{{state4}}</div><br/>
+            <div class="pulse animated position pos-5" id="state5Id" ng-class="{'circle-20':circleClass20(state5), 'circle-30':circleClass30(state5), 'circle-40':circleClass40(state5)}">{{state5}}</div><br/>
+            <div class="pulse animated position pos-6" id="state6Id" ng-class="{'circle-20':circleClass20(state6), 'circle-30':circleClass30(state6), 'circle-40':circleClass40(state6)}">{{state6}}</div>
+        </div>  
+    </div> 
+</div>    

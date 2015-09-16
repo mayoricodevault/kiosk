@@ -1,0 +1,17 @@
+<div ng-controller="timeCtrl" class="grey-font">
+    <h5 class="grey-font text-left">DRINKS SERVED AS OF <small>{{ clock  | date:'hh:mm a...'}}</small></h5>
+    </br></br>
+    <canvas height="130px" id="bar" class="chart charthor-bar"
+            chart-data="barData" chart-labels="barLabels" chart-colours="colorsxively"
+            chart-options="{plotOptions:{charthor:{allowPointSelect:true,cursor:'pointer',dataLabels:{enabled: false}}}}" chart-legend="false">
+    </canvas>
+    <div class="barDataLabels dbsmall" ng-show="sumDrinks">
+        <p>{{drinksServed.esp}}</br>
+        {{drinksServed.amer}}</br>
+        {{drinksServed.reg}}</br>
+        {{drinksServed.dcaf}}</br>
+        {{drinksServed.cap}}</br>
+        {{drinksServed.tea}}</p>
+    </div>
+    <div class="barDataCover"></div>
+</div>

@@ -1,0 +1,80 @@
+<head>
+       <link href="../../../css/bg5.css" rel="stylesheet" type="text/css">
+</head>
+
+<div class="container-fluid">
+    <div class="row row-eq-height">
+        <!-- Start List -->
+        <div ng-hide="totalOrdersActive==0" class="col-sm-3 col-md-3 sidebar ">
+    
+            <div class="container-fluid">
+            <!-- Start menu -->
+            <ul class="nav nav-sidebar" >
+                <input class=" search-box" type="text" placeholder="Search" ng-model="userSearch.name">
+                <a ng-href="/barista/register"><div class="row text-center red-font font-xs" ng-click="selectUser()===true">Take New Order +</div></a>
+                <li ng-class="{redactive:isActive(person.email)}" ng-repeat="person in orders | filter:userSearch">
+                     <a href="#" ng-show="person.active==1 && baristaTagID==person.masterId"   
+                         ng-click="active(person,$index)">
+                        {{person.name}} ( {{person.favcoffee}} )
+                    </a>
+                </li>
+            </ul>
+            <!-- End menu -->
+            </div> 
+        </div><!-- End List -->
+    
+        <!-- Xyively Content -->
+    
+        <div ng-hide="totalOrdersActive==0" class="site-wrapper2">
+    
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-3 main">
+     <div class="">
+                <div class="cover-container">
+                    <div class="inner cover text-center">
+                         <div class="row top-bar">
+            <div class="user pull-left">
+                <span class="user-box text-left">
+                    <h4 class="name">{{currentPerson.name}}</h4>
+                    <div class="user-p">
+                    <p>{{currentPerson.city}},<span class="text-upper">{{currentPerson.state}}</span></currentPerson></p>
+                    </div>
+                </span>
+            </div>
+            </div>
+                      
+                     <div class="panel-menu">
+                            <div class="menu-panel text-center">
+                               <img src="../images/products/{{currentfavcoffee}}-hover.png" width="200px"/>
+                            </div>
+                     </div>
+                        <div class="row text-center top-buffer">
+                            <a ng-href="/barista/menu"><button class="btn btn-primary right-buffer btn-lg equal-btn" ng-click="Favorite()">Cancel</button></a>
+                            <button class="btn btn-primary btn-lg equal-btn right-buffer" ng-click="served()">Continue</button>
+                        </div>
+                      
+                    </div>
+                </div>
+               
+            </div>
+            </div>
+               <div ng-include="'partials/barista/footer.html'"></div>
+        
+        </div>
+        
+        <!-- Empty Barista -->
+        <div ng-show="totalOrdersActive==0" class="site-wrapper">
+            <div class="site-wrapper-inner">
+                <div class="cover-container">
+                    <div class="inner cover text-center">
+                        <img src="../images/logo/x15-logo.png" width="250px" />
+                        <a ng-href="/barista/register"><div class="row text-center red-font top-buffer font-xs">
+                            Take New Order +
+                        </div></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+          <!--END Xyively Content -->
+    </div>
+</div> <!-- End Row -->

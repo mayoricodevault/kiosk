@@ -1,0 +1,28 @@
+  <head>
+        <link href="../../../css/bg6.css" rel="stylesheet" type="text/css">
+    </head>
+<div class="container-fluid">
+        <!-- Xyively Content -->
+    
+    <div class="site-wrapper">
+        <toast></toast>
+      <div class="site-wrapper-inner">
+        
+       <div class="cover-container">
+           
+        <div class="inner cover text-center">
+             
+            <div class="dropdown dropdown-box">
+                <input placeholder="Start typing to enter your full name" type="text" ng-model="selected" class="input-box btn-lg btn-block" typeahead="visitor as visitor.name for visitor in visitors| filter:{name:$viewValue}| limitTo:20|orderBy:'name'" />
+            </div>
+            <a ng-href="/barista"><button class="equal-btn btn btn-primary btn-lg right-buffer top-buffer" ng-click="cancel()">Cancel </button></a>
+            <a ng-href="{{urlbarista}}"><button class="equal-btn btn btn-primary btn-lg right-buffer top-buffer" ng-click="selectUser()===true">Continue</button></a>
+        </div>
+      </div>
+      <div ng-include="'partials/barista/footer.html'"></div>
+     </div>
+    </div>
+    
+        <!--END Xyively Content -->
+    </div> <!-- End Row -->
+</div> <!-- End Content -->

@@ -1,0 +1,7 @@
+<h5 class="grey-font text-left">% OF ATTENDEES SERVED</h5>
+<div ng-controller="doughnutCtrl" class="grey-font top-buffer">
+    <div class="doughnut-text" ng-show="doughnutPercent>0">{{doughnutPercent}}%</div>
+    <canvas height="155px" id="doughnut" class="chart chart-doughnut"
+      chart-data="doughnutData" chart-labels="doughnutLabels" chart-colours="colorsdoghnut" chart-legend="true" chart-options="{percentageInnerCutout : 85, segmentShowStroke:false, startAngle:0.7}">
+    </canvas>
+</div>

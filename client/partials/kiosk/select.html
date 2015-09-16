@@ -1,0 +1,206 @@
+<!-- WELCOME -->
+<div ng-show = "paneSelected.id == '1'" ng-cloak id="inicio">
+    
+    <head>
+        <!--<link href="../../css/bg3.css" rel="stylesheet" type="text/css">
+        -->
+        <link href="../../css/cover.css" rel="stylesheet" type="text/css" />
+    </head>
+    
+    <div class="container" style="background-image: url(../images/coffee-bar-bg4-1600.jpg);">
+    
+        <!--Start Xively Content -->
+        
+        <div class="site-wrapper">
+        
+            <div class="site-wrapper-inner">
+               
+                <div class="cover-container">
+                    <div class="inner cover text-center">
+                        <h1 class="cover-heading font-sm">Hi, {{currentPerson.name}}!</h1>
+                        <p class="font-xs grey-font">Would you like to order your favorite drink?</p>
+                        <div class="panel-menu">    
+                            <div class="menu-panel text-center">
+                                    <img src="../images/products/{{currentfavcoffee}}-hover.png" class="img-beverage" />
+   
+                            </div>
+                        </div>      
+                        <div class="row text-center top-buffer">      
+                            <a ng-href="/kiosk/thankyou"><button class="btn btn-primary btn-lg equal-btn right-buffer" ng-click="order()">Yes</button></a>
+                            <button class="btn btn-primary btn-lg equal-btn" ng-click="menuBar()">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="logo">
+           <img src="../images/logo/x15-logo.png" class="x15-img" />
+        </div>
+        </div>
+        <!-- End Xively Content -->
+    </div>
+    
+   
+    <!-- END -->
+</div>
+
+<div ng-show="paneSelected.id == '2' "   ng-cloak >
+
+    <head>
+        <!-- 
+        <link href="../../css/bg3.css" rel="stylesheet" type="text/css">
+        -->
+        <link href="../../css/cover.css" rel="stylesheet" type="text/css" />
+    </head>
+    <div class="masthead clearfix" >
+        <div class="inner">
+        </div>
+    </div>
+    <toast></toast>
+    <div class="site-wrapper" >
+        <div class="site-wrapper-inner">
+          <div class="cover-container">
+            <div class="inner cover text-center">
+              <div class="dropdown dropdown-box">
+                <input placeholder="Start typing to enter your full name" type="text" ng-model="selected" class="input-box btn-lg btn-block" typeahead="visitor as visitor.name for visitor in visitors| filter:{name:$viewValue}| limitTo:20|orderBy:'name'" />
+              </div>
+              <div class="row top-buffer">
+              <a ng-href="/splash"><button class="btn btn-default btn-lg right-buffer top-buffer equal-btn" >Cancel </button></a>
+              <a ng-href><button class="btn btn-primary btn-lg  top-buffer equal-btn" ng-click="selectUser()===true" >Continue</button></a>
+            </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="logo">
+        <img src="../images/logo/x15-logo.png" class="x15-img" />
+    </div>
+
+</div>
+
+<div ng-show = "paneSelected.id == '3' " ng-cloak >
+    <!--
+    <head>
+     <link href="../css/bg4.css" rel="stylesheet" type="text/css">
+    </head>
+    -->
+    <div class="container" >
+    <!--Start Xively Content -->
+    <!-- Start beverages-->
+        <div class="row top-bar">
+            <div class="user pull-left">
+                <span class="user-box">
+                    <h4 class="name">{{currentPerson.name}}</h4>
+                    <div class="user-p">
+                    <p>{{currentPerson.city}},<span class="text-upper">{{currentPerson.state}}</span></currentPerson></p>
+                    </div>
+                </span>
+            </div>
+      <!--
+        <div class="weather pull-left">
+            <img src="../../images/weather.png" class="pull-left" width="50px">
+            <div class="pull-left">
+                    <p>{{currentPerson.city}}</p>
+                    <p>{{weather.wind.chill}}&degF</p>
+                </div> 
+                </span>
+            </div>-->
+          
+        </div>
+        <div class=" row" >
+         <div class="panel-align">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div id="black">
+                    <div class="front ">
+                        <div class="menu-panel text-center">
+                            <span ng-if="esp==false"><img class="img-beverage wobble animated" src="../images/products/esp.png" ng-click="activeGlass(1)"></span>
+                            <span ng-if="esp==true"><img class="img-beverage rubberBand animated" src="../images/products/esp-hover.png" ng-click="activeGlass(1)"></span>
+                        </div>
+                    </div><!-- /.End Front -->
+                </div>
+            </div><!-- /.col -->
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="menu-panel text-center">
+                    <span ng-if="cap==false"><img class="img-beverage wobble animated " src="../images/products/cap.png" ng-click="activeGlass(2)" /></span>
+                    <span ng-if="cap==true"><img class="img-beverage rubberBand animated" src="../images/products/cap-hover.png" ng-click="activeGlass(2)" /></span>
+                </div>
+            </div><!-- /.col -->
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="menu-panel text-center">
+                    <span ng-if="ame==false"><img class="img-beverage wobble animated" src="../images/products/amer.png" ng-click="activeGlass(3)"></span>
+                     <span ng-if="ame==true"><img class="img-beverage rubberBand animated" src="../images/products/amer-hover.png" ng-click="activeGlass(3)"></span>
+                </div>
+            </div><!-- /.col -->
+        </div><!-- /.End Row-->
+    
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="menu-panel text-center">
+                    <span ng-if="reg==false"><img class="img-beverage wobble animated" src="../images/products/reg.png" ng-click="activeGlass(4)"></span>
+                    <span ng-if="reg==true"><img class="img-beverage rubberBand animated" src="../images/products/reg-hover.png" ng-click="activeGlass(4)"></span>
+                </div>
+            </div><!-- /.col -->
+
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="menu-panel text-center">
+                    <span ng-if="dec==false"><img class="img-beverage wobble animated" src="../images/products/dec.png" ng-click="activeGlass(5)" ></span>
+                    <span ng-if="dec==true"><img class="img-beverage rubberBand animated" src="../images/products/dec-hover.png" ng-click="activeGlass(5)"></span>
+                </div>
+            </div><!-- /.col -->
+            
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="menu-panel text-center">
+                    <span ng-if="tea==false"><img class="img-beverage wobble animated" src="../images/products/tea.png" ng-click="activeGlass(6)"></span>
+                    <span ng-if="tea==true"><img class="img-beverage rubberBand animated" src="../images/products/tea-hover.png" ng-click="activeGlass(6)"></span>
+                </div>
+            </div><!-- /.col -->
+        </div>  <!--/.End Row-->  
+        <!-- End beverages-->
+        </div>
+        </div>
+        <div class="row text-center top-buffer">      
+              <button class="btn btn-default btn-lg equal-btn right-buffer" ng-click="cancelMenuBar()">Cancel</button>
+              <a ng-href="/kiosk/thankyou"><button class="btn btn-primary btn-lg equal-btn right-buffer" ng-click="order()">Continue</button></a>
+        </div> <!-- /.End Row-->  
+        <!-- End Xively Content -->
+        
+    </div><!-- End Container -->
+        
+    <div class="logo">
+        <img src="../images/logo/x15-logo.png" class="x15-img" />
+    </div>
+    <!-- END -->
+    
+</div>
+
+
+<!-- ------------- scripts ------------------- -->
+
+<script>
+    $('.easy-sidebar-toggle').click(function(e) {
+        e.preventDefault();
+        $('body').toggleClass('toggled');
+        $('.navbar.easy-sidebar').removeClass('toggled');
+    });
+    
+    $('html').on('swiperight', function(){
+        $('body').addClass('toggled');
+    });
+    
+    $('html').on('swipeleft', function(){
+        $('body').removeClass('toggled');
+    });
+</script>
+
+<script type="text/javascript">
+    function flipcard(value) {
+        switch (value) {
+            case 1: document.querySelector('#black').classList.toggle('flip'); break;
+            case 2: document.querySelector('#mocha').classList.toggle('flip'); break;
+            case 3: document.querySelector('#iced').classList.toggle('flip'); break;
+            case 4: document.querySelector('#latte').classList.toggle('flip'); break;
+            case 5: document.querySelector('#cappuccino').classList.toggle('flip'); break;
+            case 6: document.querySelector('#other').classList.toggle('flip'); break;
+        }
+    }
+</script>

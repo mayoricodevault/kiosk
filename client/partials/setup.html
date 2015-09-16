@@ -1,0 +1,36 @@
+<head>
+    <link href="../../css/splash.css" rel="stylesheet" type="text/css">
+    <link href="../../css/setup.css" rel="stylesheet" type="text/css">
+</head>
+<div class="site-wrapper fade-left">
+    <div class="site-wrapper-inner " >
+        <div class="cover-container ">
+            <div class="inner cover text-center" >
+                <img ng-animate="'animate'" src="../images/xperience2015_logo-red.png" class="img-responsive bounceInDown animated">
+                <form name="setUpFrm"  class="bounceInRight animated">
+                    <div class="col-sm-12 top-buffer" ng-show="formShow" id="secFrm" >
+                        <div class="form-group" ng-class="{ 'has-error': setUpFrm.devicename.$touched && setUpFrm.devicename.$invalid }">
+                            <input type="text" name="devicename" ng-model="devicename" class="form-control margin-bottom" placeholder="Device Name" required minlength="5">
+                            <div ng-messages="setUpFrm.devicename.$error" ng-if="setUpFrm.devicename.$touched" class="val_messages">
+                                <div class="val_msg shake animated" ng-message="required">This filed is required</div>
+                                <div class="val_msg  shake animated" ng-message="minlength">Device Name too short</div>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': setUpFrm.devicetype.$touched && setUpFrm.devicetype.$invalid }">
+                            <select name="devicetype" class="form-control margin-bottom" ng-model="deviceSelected" ng-options="device as device.devicename for device in devices " required><option></option></select>
+                            <div ng-messages="setUpFrm.devicetype.$error" class="val_messages">
+                                <div class="val_msg  shake animated" ng-message="required">This filed is required</div>
+                            </div>
+                        </div>    
+                        <button type="submit" ng-disabled="setUpFrm.$invalid || !formShow" class="btn btn-default top-buffer" ng-click="subscribe(devicename,deviceSelected.tagid,deviceSelected.serverUrl, deviceSelected.type, deviceSelected.master)">Register This Device </button>
+                </div>
+                </form>
+     
+            </div>
+            <div ng-show="!formShow" class="inner cover text-center" >
+                <img  src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+            </div>
+        </div>
+    
+    </div>
+</div>

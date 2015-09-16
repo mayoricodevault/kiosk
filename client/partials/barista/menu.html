@@ -1,0 +1,85 @@
+  <head>
+        <link href="../../../css/bg7.css" rel="stylesheet" type="text/css">
+    </head>
+<div class="container-fluid">
+     <div class="row top-bar">
+            <div class="user pull-left">
+                <span class="user-box text-left">
+                    <h4 class="name">{{currentPerson.name}}</h4>
+                    <div class="user-p">
+                    <p>{{currentPerson.city}},<span class="text-upper">{{currentPerson.state}}</span></currentPerson></p>
+                    </div>
+                </span>
+            </div>
+            </div>
+    <div class=" row">
+         <div class="panel-align">
+             
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <!--Start Xively Content -->
+            <!-- Start beverages-->
+                           <div id="black">
+                    <div class="front ">
+                        <div class="menu-panel text-center">
+                            <span ng-if="esp==false"><img class="img-beverage wobble animated" src="../images/products/esp.png" ng-click="activeGlass(1)"></span>
+                            <span ng-if="esp==true"><img class="img-beverage rubberBand animated" src="../images/products/esp-hover.png" ng-click="activeGlass(1)"></span>
+                        </div>
+                    </div><!-- /.End Front -->
+                </div>
+            
+            </div><!-- /.col -->
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="menu-panel text-center">
+                    <span ng-if="cap==false"><img class="img-beverage wobble animated " src="../images/products/cap.png" ng-click="activeGlass(2)" /></span>
+                    <span ng-if="cap==true"><img class="img-beverage rubberBand animated" src="../images/products/cap-hover.png" ng-click="activeGlass(2)" /></span>
+                </div>
+            </div><!-- /.col -->
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="menu-panel text-center">
+                    <span ng-if="ame==false"><img class="img-beverage wobble animated" src="../images/products/amer.png" ng-click="activeGlass(3)"></span>
+                     <span ng-if="ame==true"><img class="img-beverage rubberBand animated" src="../images/products/amer-hover.png" ng-click="activeGlass(3)"></span>
+                </div>
+            </div><!-- /.col -->
+        </div><!-- /.End Row-->
+    
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="menu-panel text-center">
+                    <span ng-if="reg==false"><img class="img-beverage wobble animated" src="../images/products/reg.png" ng-click="activeGlass(4)"></span>
+                    <span ng-if="reg==true"><img class="img-beverage rubberBand animated" src="../images/products/reg-hover.png" ng-click="activeGlass(4)"></span>
+                </div>
+            </div><!-- /.col -->
+
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="menu-panel text-center">
+                    <span ng-if="dec==false"><img class="img-beverage wobble animated" src="../images/products/dec.png" ng-click="activeGlass(5)" ></span>
+                    <span ng-if="dec==true"><img class="img-beverage rubberBand animated" src="../images/products/dec-hover.png" ng-click="activeGlass(5)"></span>
+                </div>
+            </div><!-- /.col -->
+            
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="menu-panel text-center">
+                    <span ng-if="tea==false"><img class="img-beverage wobble animated" src="../images/products/tea.png" ng-click="activeGlass(6)"></span>
+                    <span ng-if="tea==true"><img class="img-beverage rubberBand animated" src="../images/products/tea-hover.png" ng-click="activeGlass(6)"></span>
+                </div>
+            </div><!-- /.col -->
+        </div>  <!--/.End Row-->  
+        <!-- End beverages-->
+        </div>
+        </div>
+        <div class="row text-center top-buffer">      
+              <a ng-show="isFavorite" ng-href="/barista"><button class="btn btn-default btn-lg equal-btn right-buffer">Cancel</button></a>
+              <a ng-hide="isFavorite" ng-href="/barista/register"><button class="btn btn-default btn-lg equal-btn right-buffer">Cancel</button></a>
+              <a ng-href="/barista"><button class="btn btn-primary btn-lg equal-btn right-buffer" ng-click="served()">Complete Order</button></a>
+        </div> <!-- /.End Row-->  
+        <!-- End Xively Content -->
+    
+        
+   <div class="logo">
+        <img src="../images/logo/x15-logo.png" class="x15-img" />
+    </div>
+    <!-- END -->
+        </div>
+    </div> <!-- End Row -->
+</div> <!-- End Content -->

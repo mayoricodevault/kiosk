@@ -1,0 +1,86 @@
+<head>
+    <link href="css/dashboard.css" rel="stylesheet"/>
+</head>
+<div class="container-fluid dash">
+   <div class="row top-buffer"><h2 class="red-font"><b>Coffee</b> Data Visualization</h2></div>
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4 text-center">
+            <div id="el1" class="flipcard h" style="{height:35%}">
+                <div id="el1front" class="front">
+                    <div ng-include="'partials/dashboard/widgets/wi1.html'"></div>
+                </div>
+                <div id="el1back" class="back">
+                    <div ng-include="'partials/dashboard/widgets/wi8.html'"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 text-center">
+            <div id="el2" class="flipcard h" >
+                <div id="el2front" class="front">
+                    <div ng-include="'partials/dashboard/widgets/wi2.html'"></div>
+                </div>
+                <div id="el2back" class="back">
+                    <div ng-include="'partials/dashboard/widgets/wi8.html'"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 text-center">
+            <div id="el3" class="flipcard h" >
+                <div id="el3front" class="front">
+                    <div ng-include="'partials/dashboard/widgets/wi3.html'"></div>
+                </div>
+                <div id="el3back" class="back">
+                    <div ng-include="'partials/dashboard/widgets/wi8.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4 text-center">
+            <div id="el4" class="flipcard h" >
+                <div id="el4front" class="front">
+                    <div ng-include="'partials/dashboard/widgets/wi4.html'"></div>
+                </div>
+                <div id="el4back" class="back">
+                    <div ng-include="'partials/dashboard/widgets/wi8.html'"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 text-center">
+            <div id="el5" class="flipcard h" >
+                <div id="el5front" class="front">
+                    <div ng-include="'partials/dashboard/widgets/wi5.html'"></div>
+                </div>
+                <div id="el5back" class="back">
+                    <div ng-include="'partials/dashboard/widgets/wi8.html'"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 text-center">
+            <div id="el6" class="flipcard h" >
+                <div id="el6front" class="front">
+                    <div ng-include="'partials/dashboard/widgets/wi6.html'"></div>
+                </div>
+                <div id="el6back" class="back">
+                    <div ng-include="'partials/dashboard/widgets/wi8.html'"></div>
+                </div>
+            </div>
+        </div>
+ 
+    </div>
+    
+       <footer class="footer top-buffer">
+          <div class="container-fluid">
+             <div style="width:60%" ng-show="msgExpositor">
+                 <span ><h4 class="red-font">UpComing Events:</h4></span>
+                 <span class="pull-left">
+                    <p align="justify"><i class="fa fa-clock-o"></i> <span class="grey-font">{{msgStart  | date:'hh:mm'}}-{{msgEnd  | date:'hh:mm a'}}  |  <b>{{msgText}}</b> </span></br>
+                    <i class="fa fa-user"></i> <span class="grey-font"><b> {{msgExpositor}}</b></span></p>
+                </span>
+            </div>
+          </div>
+       </footer>
+       <div class="logo">
+        <img src="../images/logo/x15-logo.png" class="x15-img" />
+</div>
+</div>

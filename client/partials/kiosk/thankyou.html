@@ -1,0 +1,48 @@
+<!--
+<head>
+     <link href="../css/bg2.css" rel="stylesheet" type="text/css">
+</head>
+-->
+<div class="container-fluid">
+    <div class="row row-eq-height">
+        <!-- Start List -->
+        
+        <div class="col-sm-3 col-md-3 sidebar "  scroll-glue>
+            <div class="container-fluid" id="idColumn2">
+                <ul class="nav nav-sidebar" >
+                    <li ng-class="{active:$last,effectMove: $last}" ng-repeat="person in people | orderBy:'timeStamp':reverse" >
+                        <a href="#" ng-show="person.active==1 && baristaTagID==person.masterId"><b>{{person.name}}</b>({{person.favcoffee}}) </a>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+        <!-- End List -->
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-3 main">
+            <!-- Xyively Content -->
+     <div class="site-wrapper">
+
+         <div class="site-wrapper-inner">
+
+             <div class="cover-container">
+       
+                <div class="inner cover row text-center content-panel circle-panel">
+                    <div class="box-margin row-option circle bounceIn animated text-uppercase">
+                        <h3 class="white-font">Thanks, {{currentPerson.name}}!</h3>
+                        <p>Please proceed to the coffee bar.<br>
+                        One of our baristas is preparing your beverage.</p>
+                    </div>
+                </div>
+              </div>
+          </div>
+     <div class="logo">
+        <img src="../images/logo/x15-logo.png" class="x15-img" />
+    </div>
+            
+      </div>
+           
+            <!--END Xyively Content -->
+        </div>
+    </div> <!-- End Row -->
+</div> <!-- End Content -->
+
+
